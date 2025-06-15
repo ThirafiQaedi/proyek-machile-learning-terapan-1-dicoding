@@ -16,32 +16,27 @@ Pengembangan model prediktif ini diharapkan dapat menjadi langkah awal dalam men
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
-### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+## Problem Statements
+Berdasarkan latar belakang yang telah disampaikan, terdapat beberapa rumusan masalah yang akan diselesaikan pada proyek ini:
+1. Faktor-faktor apa saja yang memengaruhi tingkat risiko gangguan kesehatan mental pada pelajar?
+2. Bagaimana cara membangun model machine learning untuk memprediksi kondisi kesehatan mental pelajar berdasarkan data yang tersedia?
+3. Bagaimana cara memilih model machine learning yang paling optimal berdasarkan metrik evaluasi seperti akurasi, precision, recall, dan F1-score untuk kasus prediksi kesehatan mental pelajar?
 
 ### Goals
+Proyek ini dibangun dengan tujuan:
+1. Mengidentifikasi variabel-variabel yang berkontribusi signifikan terhadap risiko gangguan kesehatan mental pada pelajar, seperti tekanan akademik, stres finansial, dan kepuasan belajar.
+2. Membangun dan melatih model machine learning untuk melakukan klasifikasi kondisi kesehatan mental pelajar berdasarkan fitur numerik dan kategorikal.
+3. Mengevaluasi dan membandingkan beberapa algoritma machine learning guna menentukan model terbaik berdasarkan akurasi, precision, recall, dan F1-score dalam memprediksi risiko kesehatan mental pelajar.
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
+### Solution Statements
+Untuk mencapai tujuan dalam studi kasus ini, dilakukan beberapa tahapan solusi sebagai berikut:
+1. Melakukan eksplorasi dan analisis data untuk memahami karakteristik dataset yang terdiri dari fitur numerik dan kategorikal, seperti Academic Pressure, Financial Stress, Sleep Duration, dan Family History of Mental Illness. Tahapan ini mencakup pembersihan data (data cleaning), transformasi data kategorikal, visualisasi distribusi variabel, serta analisis korelasi untuk mengidentifikasi fitur-fitur yang paling berpengaruh terhadap risiko gangguan kesehatan mental.
+2. Membangun model machine learning klasifikasi untuk memprediksi status kesehatan mental pelajar berdasarkan fitur yang telah diolah. Dalam proyek ini, tiga algoritma klasifikasi digunakan:
+    - **Naive Bayes**: Model probabilistik yang efisien dan cocok untuk data kategorikal dan numerik yang bersih serta bebas multikolinearitas.
+    - **Decision Tree**: Model yang mudah diinterpretasi dan mampu menangani relasi non-linear antara fitur dan label.
+    - **Support Vector Machine (SVM)**: Model yang efektif dalam menangani data berdimensi tinggi dan memisahkan kelas dengan margin maksimal.
+3. Melakukan evaluasi dan pemilihan model terbaik dengan membandingkan performa masing-masing model berdasarkan metrik evaluasi seperti akurasi, precision, recall, dan F1-score. Hasil evaluasi akan digunakan untuk menentukan model yang paling akurat dan andal dalam memprediksi risiko gangguan kesehatan mental pelajar.
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
 ## Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
@@ -132,17 +127,12 @@ Proyek ini dibangun dengan tujuan:
 
 ### Solution Statements
 Untuk mencapai tujuan dalam studi kasus ini, dilakukan beberapa tahapan solusi sebagai berikut:
-1. Melakukan eksplorasi dan analisis data untuk memahami karakteristik data dan mengidentifikasi fitur-fitur yang paling 
-relevan terhadap tingkat risiko gangguan kesehatan mental. Analisis yang dilakukan mencakup pembersihan data, visualisasi, 
-dan uji korelasi antarf fitur dalam data.
-2. Membangun model *machine learning* klasifikasi untuk memprediksi tingkat risiko kesehatan mental individu. Beberapa 
-model berikut dipilih berdasarkan kemampuannya dalam menangani kasus klasifikasi:
-    - **K-Nearest Neighbors (KNN)**: Mengklasifikasikan data berdasarkan kemiripan dengan tetangga terdekat.
-    - **Random Forest**: Menggabungkan banyak *decision tree* untuk meningkatkan stabilitas dan akurasi klasifikasi.
-    - **Boosting**: Menggabungkan beberapa model sederhana secara berurutan untuk memperbaiki kesalahan prediksi dan 
-   meningkatkan performa.
-3. Melakukan evaluasi dan memilih model terbaik dengan membandingkan hasil akurasi, *precision*, *recall*, dan F1-score 
-untuk menentukan model yang paling optimal.
+1. Melakukan eksplorasi dan analisis data untuk memahami karakteristik dataset yang terdiri dari fitur numerik dan kategorikal, seperti Academic Pressure, Financial Stress, Sleep Duration, dan Family History of Mental Illness. Tahapan ini mencakup pembersihan data (data cleaning), transformasi data kategorikal, visualisasi distribusi variabel, serta analisis korelasi untuk mengidentifikasi fitur-fitur yang paling berpengaruh terhadap risiko gangguan kesehatan mental.
+2. Membangun model machine learning klasifikasi untuk memprediksi status kesehatan mental pelajar berdasarkan fitur yang telah diolah. Dalam proyek ini, tiga algoritma klasifikasi digunakan:
+    - **Naive Bayes**: Model probabilistik yang efisien dan cocok untuk data kategorikal dan numerik yang bersih serta bebas multikolinearitas.
+    - **Decision Tree**: Model yang mudah diinterpretasi dan mampu menangani relasi non-linear antara fitur dan label.
+    - **Support Vector Machine (SVM)**: Model yang efektif dalam menangani data berdimensi tinggi dan memisahkan kelas dengan margin maksimal.
+3. Melakukan evaluasi dan pemilihan model terbaik dengan membandingkan performa masing-masing model berdasarkan metrik evaluasi seperti akurasi, precision, recall, dan F1-score. Hasil evaluasi akan digunakan untuk menentukan model yang paling akurat dan andal dalam memprediksi risiko gangguan kesehatan mental pelajar.
 
 ## Data Understanding
 Dataset yang digunakan pada proyek ini diambil dari 
