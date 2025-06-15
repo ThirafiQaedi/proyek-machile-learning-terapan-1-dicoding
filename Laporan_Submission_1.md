@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Muhamad Thirafi Qaed Setiaawan
 
 ## Domain Proyek
 
@@ -89,7 +89,7 @@ _Catatan:_
 
 
 
-
+\n
 
 
  Laporan Proyek Pertama Kelas Machine Learning Terapan - Dwi Laras Setyadita
