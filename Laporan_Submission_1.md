@@ -1,14 +1,18 @@
-# Laporan Proyek Machine Learning - Muhamad Thirafi Qaed Setiaawan
+# Laporan Proyek Machine Learning - Muhamad Thirafi Qaed Setiawan
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Proyek Machine Learning ini mengangkat domain kesehatan mental. Proyek yang dibangun adalah
+Prediksi Risiko Penyakit Mental pelajar yang dikembangkan berdasarkan data.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-- Format Referensi dapat mengacu pada penulisan sitasi [IEEE](https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf), [APA](https://www.mendeley.com/guides/apa-citation-guide/) atau secara umum seperti [di sini](https://penerbitdeepublish.com/menulis-buku-membuat-sitasi-dengan-mudah/)
-- Sumber yang bisa digunakan [Scholar](https://scholar.google.com/)
+## Latar Belakang
+Masalah kesehatan mental pada pelajar menjadi perhatian serius dalam beberapa tahun terakhir, seiring dengan meningkatnya tekanan akademik, sosial, dan perubahan gaya hidup digital. Berdasarkan data dari Indonesia National Adolescent Mental Health Survey tahun 2022, sebanyak 34% remaja dilaporkan mengalami masalah kesehatan mental, seperti stres berat, kecemasan, hingga depresi ringan hingga sedang. Selain itu, laporan dari Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi menunjukkan bahwa lebih dari 20% pelajar di Indonesia menunjukkan gejala gangguan emosi yang memengaruhi konsentrasi belajar dan interaksi sosial. Kondisi ini menegaskan bahwa kesehatan mental pelajar merupakan isu strategis yang memerlukan perhatian dari berbagai pihak, termasuk institusi pendidikan, tenaga kesehatan, orang tua, dan pembuat kebijakan.
+
+<br/>
+Di tengah kompleksitas faktor penyebab gangguan mental pada pelajar, mulai dari tekanan akademik, pekerjaan , keuangan, gaya hidup, hingga masalah keluarga, dibutuhkan pendekatan yang proaktif dan terukur untuk mendeteksi risiko sejak dini. Pemanfaatan teknologi, khususnya pendekatan berbasis machine learning, memberikan peluang besar untuk melakukan prediksi dan pemetaan risiko kesehatan mental secara lebih objektif dan efisien. Dengan menganalisis berbagai data seperti kebiasaan belajar, interaksi sosial, gaya hidup digital, dan hasil survei psikologis, sistem berbasis kecerdasan buatan dapat membantu mengidentifikasi pola-pola yang mengarah pada potensi gangguan mental pada pelajar.
+
+<br/>
+Pengembangan model prediktif ini diharapkan dapat menjadi langkah awal dalam menciptakan sistem pendukung berbasis teknologi yang mampu memberikan peringatan dini (early warning system), mendukung pengambilan keputusan, serta memfasilitasi intervensi yang lebih cepat dan tepat sasaran. Dalam jangka panjang, integrasi teknologi ini ke dalam sistem pendidikan dapat menjadi salah satu strategi preventif dalam membangun ekosistem pembelajaran yang lebih sehat secara mental dan emosional.
 
 ## Business Understanding
 
@@ -99,39 +103,32 @@ Proyek *Machine Learning* ini mengangkat domain kesehatan. Proyek yang dibangun 
 *Prediksi Risiko Penyakit Mental* yang dikembangkan berdasarkan data.
 
 ## Latar Belakang
-Masalah kesehatan mental dan regulasi emosi menjadi isu yang semakin memerlukan perhatian serius di berbagai kelompok 
-usia. Berdasarkan Survei Kesehatan Indonesia 2023 yang dilakukan oleh Kementerian Kesehatan, prevalensi depresi nasional 
-mencapai 1,4%, yang menunjukkan bahwa gangguan kesehatan mental bukanlah hal yang jarang terjadi[1]. Selain itu, survei 
-dari *Indonesia National Adolescent Mental Health* 2022 mengungkap bahwa satu dari tiga individu mengalami masalah 
-kesehatan mental, sementara satu dari dua puluh mengalami gangguan mental dalam 12 bulan terakhir[2]. Temuan ini 
-mencerminkan bahwa permasalahan kesehatan mental bersifat lintas usia dan perlu penanganan menyeluruh yang melibatkan 
-berbagai pendekatan, termasuk edukasi, dukungan sosial, serta inovasi teknologi dalam bidang kesehatan mental.
+Masalah kesehatan mental dan regulasi emosi menjadi isu yang semakin memerlukan perhatian serius, khususnya di kalangan pelajar. Masa pendidikan sering kali menjadi fase yang penuh tekanan, baik dari segi akademik maupun sosial. Berdasarkan Survei Kesehatan Indonesia 2023 yang dilakukan oleh Kementerian Kesehatan, prevalensi depresi nasional mencapai 1,4%, menunjukkan bahwa gangguan kesehatan mental bukanlah hal yang jarang terjadi. Lebih lanjut, survei dari Indonesia National Adolescent Mental Health 2022 mengungkap bahwa satu dari tiga remaja mengalami masalah kesehatan mental, sementara satu dari dua puluh mengalami gangguan mental dalam 12 bulan terakhir. Temuan ini menunjukkan bahwa pelajar merupakan kelompok yang rentan, dan penanganan terhadap isu ini perlu dilakukan secara lebih sistematis dan terukur.
 
 <br/>
+Dalam konteks kehidupan pelajar, terdapat berbagai faktor yang berpotensi memengaruhi kondisi mental seseorang, seperti tekanan akademik (academic pressure), tekanan kerja (work pressure), indeks prestasi (CGPA), kepuasan belajar (study satisfaction), jam belajar atau bekerja, stres keuangan, serta kebiasaan tidur dan pola makan. Selain itu, faktor-faktor demografis dan sosial seperti jenis kelamin, latar belakang pendidikan, dan riwayat keluarga terhadap gangguan mental juga turut berperan dalam memengaruhi kesejahteraan psikologis pelajar. Melalui pengumpulan data yang mencakup variabel-variabel tersebut—baik numerik maupun kategorikal—diperoleh gambaran komprehensif mengenai kondisi dan potensi risiko kesehatan mental pada pelajar.
 
-Pemanfaatan teknologi digital, khususnya sistem pendukung berbasis kecerdasan buatan, berpotensi menjadi solusi inovatif 
-untuk meningkatkan kesadaran serta deteksi dini risiko masalah kesehatan mental. Dengan kemampuan analisis data yang 
-cepat dan akurat, teknologi ini dapat membantu mengidentifikasi pola perilaku dan gejala yang mengarah pada risiko 
-penyakit mental. Selain itu, penggunaan aplikasi dan platform digital juga memungkinkan akses layanan kesehatan mental 
-yang lebih luas dan mudah dijangkau oleh berbagai kelompok masyarakat, sehingga intervensi dapat dilakukan lebih cepat 
-dan tepat sasaran.
+<br/>
+Pemanfaatan teknologi digital, khususnya sistem prediktif berbasis machine learning, berpotensi menjadi solusi inovatif untuk mendeteksi risiko masalah kesehatan mental secara dini. Dengan kemampuan analisis data yang cepat dan akurat, algoritma machine learning dapat mengidentifikasi pola dan hubungan tersembunyi antar faktor yang berkaitan dengan depresi dan kondisi mental lainnya. Dalam proyek ini, data yang mencakup berbagai aspek kehidupan pelajar—seperti tekanan akademik, stres finansial, kebiasaan tidur, dan riwayat kesehatan keluarga—digunakan untuk membangun model prediksi yang dapat memetakan risiko depresi secara individual.
+
+<br/>
+Dengan pendekatan ini, diharapkan dapat dihasilkan sistem pendukung yang mampu memberikan peringatan dini terhadap potensi gangguan mental, khususnya pada pelajar. Teknologi ini dapat menjadi alat bantu bagi institusi pendidikan, psikolog sekolah, maupun pengambil kebijakan dalam menyusun strategi intervensi yang tepat sasaran, serta menciptakan lingkungan belajar yang lebih sehat secara mental dan emosional.
+
+
 
 ## Business Understanding
 
 ## Problem Statements
 Berdasarkan latar belakang yang telah disampaikan, terdapat beberapa rumusan masalah yang akan diselesaikan pada proyek ini:
-1. Faktor apa saja yang memengaruhi tingkat risiko penyakit mental pada individu?
-2. Bagaimana cara membangun model *machine learning* untuk melakukan klasifikasi tingkat risiko penyakit mental?
-3. Bagaimana cara memilih model *machine learning* dengan akurasi, *precision*, *recall*, dan F1-score terbaik untuk 
-masalah prediksi risiko penyakit mental?
+1. Faktor-faktor apa saja yang memengaruhi tingkat risiko gangguan kesehatan mental pada pelajar?
+2. Bagaimana cara membangun model machine learning untuk memprediksi kondisi kesehatan mental pelajar berdasarkan data yang tersedia?
+3. Bagaimana cara memilih model machine learning yang paling optimal berdasarkan metrik evaluasi seperti akurasi, precision, recall, dan F1-score untuk kasus prediksi kesehatan mental pelajar?
 
 ### Goals
 Proyek ini dibangun dengan tujuan:
-1. Mengetahui variabel dan fitur yang berpengaruh terhadap tingkat risiko kesehatan mental individu.
-2. Mengetahui cara membangun model *machine learning* untuk melakukan klasifikasi tingkat kesehatan mental individu 
-berdasarkan data.
-3. Menentukan model terbaik untuk memprediksi tingkat risiko kesehatan mental berdasarkan hasil perbandingan metrik 
-evaluasi seperti akurasi, *precision*, *recall*, dan F1-score.
+1. Mengidentifikasi variabel-variabel yang berkontribusi signifikan terhadap risiko gangguan kesehatan mental pada pelajar, seperti tekanan akademik, stres finansial, dan kepuasan belajar.
+2. Membangun dan melatih model machine learning untuk melakukan klasifikasi kondisi kesehatan mental pelajar berdasarkan fitur numerik dan kategorikal.
+3. Mengevaluasi dan membandingkan beberapa algoritma machine learning guna menentukan model terbaik berdasarkan akurasi, precision, recall, dan F1-score dalam memprediksi risiko kesehatan mental pelajar.
 
 ### Solution Statements
 Untuk mencapai tujuan dalam studi kasus ini, dilakukan beberapa tahapan solusi sebagai berikut:
