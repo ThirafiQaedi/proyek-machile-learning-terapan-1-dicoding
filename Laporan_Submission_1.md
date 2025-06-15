@@ -16,7 +16,7 @@ Pengembangan model prediktif ini diharapkan dapat menjadi langkah awal dalam men
 
 ## Business Understanding
 
-## Problem Statements
+### Problem Statements
 Berdasarkan latar belakang yang telah disampaikan, terdapat beberapa rumusan masalah yang akan diselesaikan pada proyek ini:
 1. Faktor-faktor apa saja yang memengaruhi tingkat risiko gangguan kesehatan mental pada pelajar?
 2. Bagaimana cara membangun model machine learning untuk memprediksi kondisi kesehatan mental pelajar berdasarkan data yang tersedia?
