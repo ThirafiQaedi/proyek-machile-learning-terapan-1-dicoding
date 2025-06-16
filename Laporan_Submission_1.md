@@ -240,14 +240,31 @@ Dengan demikian, `Lifestyle_Balance` mencerminkan keseimbangan gaya hidup pelaja
 
 ![clustering](scr_pic/cluster.png)
 
+#### Data Spliting
+- **Pemilihan Fitur (Predictors)**  
+  Menggabungkan 12 variabel, baik yang asli (usia, tekanan akademik/kerja, CGPA, kepuasan, jam kerja/belajar, stres finansial, riwayat keluarga) maupun dua fitur sintetis (`Stress_Score` dan `Lifestyle_Balance`). Ini memastikan model dapat menangkap aspek demografis, akademik, gaya hidup, dan tekanan mental dalam satu framework.
+- **Imputasi Missing Values**  
+  Mengisi nilai yang tersisa dengan **median** tiap kolom (`X.fillna(X.median())`) menjaga distribusi sentral tanpa terpengaruh outlier ekstrem, sehingga dataset siap untuk pelatihan tanpa baris kosong.
+- **Data Spliting(Train/Test Split)**  
+  Membagi data untuk dialokasikan **80% data** untuk pelatihan dan **20%** untuk pengujian, dengan `random_state=42` untuk reproduktibilitas.  
+  - Pastikan proporsi kelas `Depression` (0 vs 1) tetap seimbang di kedua set—jika tidak, pertimbangkan `stratify=y` agar evaluasi lebih adil.
+
 
 ## Modeling
 
+Model yang digunakan: 
+- **Naive Bayes**  
+- **Decision Tree** (random_state=42)  
+- **Support Vector Machine** (kernel=linear, random_state=42)  
+
+Deskirpsi : 
 - **Naive Bayes** adalah algoritma klasifikasi probabilistik yang bekerja berdasarkan Teorema Bayes dengan asumsi independensi antar fitur. Setiap fitur dianggap berkontribusi secara terpisah terhadap probabilitas kelas akhir. Dalam praktiknya, varian GaussianNB sering digunakan untuk data numerik, dengan parameter `var_smoothing` (default ≈1e-9) untuk menghindari pembagian nol. Naive Bayes sangat cepat dalam pelatihan dan prediksi, efisien pada dataset besar, serta tahan terhadap data berdimensi tinggi. Namun, asumsi “independen” jarang terpenuhi di dunia nyata, sehingga performanya bisa menurun jika fitur saling berkorelasi, dan model mudah memberikan probabilitas nol jika tidak ada contoh dari kombinasi fitur tertentu di data latih.
 
-- **Decision Tree** adalah model berbasis pohon keputusan yang memisahkan data dengan memilih titik split pada tiap node berdasarkan metrik seperti Gini impurity (`criterion="gini"`) atau Information Gain (`criterion="entropy"`). Hyperparameter penting meliputi `max_depth` (kedalaman maksimum pohon), `min_samples_split` (minimal sampel untuk memecah node), dan `random_state` untuk reproduksibilitas. Decision Tree mudah diinterpretasikan—setiap cabang merepresentasikan aturan “jika–maka”—dan dapat menangani data numerik maupun kategorikal tanpa pra-pemrosesan intensif. Kelemahannya, pohon tunggal rawan overfitting pada data berisik, sangat sensitif terhadap perubahan kecil di data, dan cenderung bias memilih fitur dengan banyak level.
+- **Decision Tree** adalah model berbasis pohon keputusan yang memisahkan data dengan memilih titik split pada tiap node berdasarkan metrik seperti Gini impurity (`criterion="gini"`) atau Information Gain (`criterion="entropy"`). Hyperparameter penting meliputi `max_depth` (kedalaman maksimum pohon), `min_samples_split` (minimal sampel untuk memecah node), dan `random_state=42` untuk reproduksibilitas dan konsistensi hasil di setiap percobaan. Decision Tree mudah diinterpretasikan—setiap cabang merepresentasikan aturan “jika–maka”—dan dapat menangani data numerik maupun kategorikal tanpa pra-pemrosesan intensif. Kelemahannya, pohon tunggal rawan overfitting pada data berisik, sangat sensitif terhadap perubahan kecil di data, dan cenderung bias memilih fitur dengan banyak level.  
 
-- **Support Vector Machine (SVM)** adalah algoritma margin-based yang mencari hyperplane optimal untuk memisahkan kelas dengan margin terlebar. Dengan kernel (“linear”, “rbf”, “poly”) SVM dapat menangani data non-linier lewat trik kernel. Dua hyperparameter utama adalah `C` (regularisasi, trade-off antara margin lebar dan kesalahan klasifikasi) dan `gamma` pada kernel RBF (pengaruh tiap titik data). SVM efektif pada data berdimensi tinggi dan memiliki daya generalisasi baik jika parameter diatur tepat. Namun, pelatihan SVM bisa lambat pada dataset besar, sensitif terhadap pilihan kernel dan skala fitur, serta kurang cocok untuk data sangat berisik karena margin yang terlalu sempit dapat menyebabkan overfitting.
+
+   **Support Vector Machine (SVM)** adalah algoritma margin-based yang mencari hyperplane optimal untuk memisahkan kelas dengan margin terlebar. Dengan kernel (“linear”, “rbf”, “poly”) SVM dapat menangani data non-linier lewat trik kernel. Dua hyperparameter utama adalah `C` (regularisasi, trade-off antara margin lebar dan kesalahan klasifikasi) dan `gamma` pada kernel RBF (pengaruh tiap titik data). Selain itu, parameter `kernel="linear"` dan `random_state=42` digunakan untuk menentukan jenis kernel dan memastikan reproduksibilitas hasil. SVM efektif pada data berdimensi tinggi dan memiliki daya generalisasi baik jika parameter diatur tepat. Namun, pelatihan SVM bisa lambat pada dataset besar, sensitif terhadap pilihan kernel dan skala fitur, serta kurang cocok untuk data sangat berisik karena margin yang terlalu sempit dapat menyebabkan overfitting.  
+
 
 
 ## Evaluation
