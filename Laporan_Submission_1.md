@@ -351,7 +351,7 @@ Berdasarkan hasil pengujian pada data uji:
   - Cenderung underfit/overfit tanpa tuning  
   - Kinerja jauh di bawah dua model lainnya  
 
-
+---
 ### Penyelesaian Permasalahan  
 1. Fitur paling berpengaruh teridentifikasi: `Depression`, `Academic Pressure`, `Work Pressure`, `CGPA`, `Sleep_Duration_Num`, `Stress_Score`, `Lifestyle_Balance`.  
 2. Tiga model klasifikasi berhasil dibangun dan dievaluasi.  
@@ -364,7 +364,7 @@ Berdasarkan hasil pengujian pada data uji:
 - **Support Vector Machine** adalah model terbaik untuk masalah klasifikasi risiko depresi pada pelajar.  
 - Pendekatan ini dapat diintegrasikan dalam sistem pendukung keputusan untuk deteksi dini dan intervensi kesehatan mental pelajar.
 
-
+---
 ### Rekomendasi
 1. **Gunakan SVM** sebagai model utama untuk deteksi risiko depresi.  
 2. Simpan **Naive Bayes** sebagai opsi cepat untuk inferensi real-time.  
