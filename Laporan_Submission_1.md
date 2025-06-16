@@ -353,16 +353,20 @@ Berdasarkan hasil pengujian pada data uji:
 
 ---
 ### Penyelesaian Permasalahan  
-1. Fitur paling berpengaruh teridentifikasi: `Depression`, `Academic Pressure`, `Work Pressure`, `CGPA`, `Sleep_Duration_Num`, `Stress_Score`, `Lifestyle_Balance`.  
-2. Tiga model klasifikasi berhasil dibangun dan dievaluasi.  
-3. SVM terpilih sebagai model optimal dengan metrik tertinggi.
+1. Fitur dalam data yang paling berpengaruh di akurasi pendeteksian teridentifikasi: `Depression`, `Academic Pressure`, `Work Pressure`, `CGPA`, `Sleep_Duration_Num`, `Stress_Score`, `Lifestyle_Balance`.  
+2. Tiga model klasifikasi yang di rencanakan berhasil dibangun dan dievaluasi.  
+3. SVM terpilih sebagai model optimal dengan metrik tertinggi setelah dilakukan evaluasi model dalam memprediksi risiko gangguan kesehatan mental pelajar. dengan evaluasi hasil :
+| Model                      | Accuracy | Precision (0) | Recall (0) | F1-score (0) | Precision (1) | Recall (1) | F1-score (1) |
+|----------------------------|----------|---------------|------------|--------------|---------------|------------|--------------|
+| **Support Vector Machine** | 0.8000   | 0.78          | 0.72       | 0.75         | 0.81          | 0.86       | 0.83         |
+
 
 ---
 
 ### Kesimpulan  
 - Composite features (`Stress_Score`, `Lifestyle_Balance`) memberikan nilai tambah dalam memprediksi risiko depresi.  
 - **Support Vector Machine** adalah model terbaik untuk masalah klasifikasi risiko depresi pada pelajar.  
-- Pendekatan ini dapat diintegrasikan dalam sistem pendukung keputusan untuk deteksi dini dan intervensi kesehatan mental pelajar.
+- Secara keseluruhan, evaluasi model menunjukkan bahwa pendekatan yang diambil dalam proyek ini berhasil memberikan solusi yang relevan dan bermanfaat. Model yang dibangun tidak hanya memberikan prediksi yang akurat, tetapi juga Pendekatan model ini dapat diintegrasikan dalam sistem pendukung keputusan untuk deteksi dini dan intervensi kesehatan mental pelajar.
 
 ---
 ### Rekomendasi
