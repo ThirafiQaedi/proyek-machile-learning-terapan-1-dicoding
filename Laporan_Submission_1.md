@@ -315,7 +315,7 @@ Metrix evaluasi yang digunakan **confusion matrix** , Confusion matrix (matriks 
   - Tidak membedakan mana yang lebih penting antara Precision atau Recall; hanya cocok jika keduanya sama penting.
 
 
-#### hasil evaluasi 
+### hasil evaluasi 
 | Model                      | Accuracy | Precision (0) | Recall (0) | F1-score (0) | Precision (1) | Recall (1) | F1-score (1) |
 |----------------------------|----------|---------------|------------|--------------|---------------|------------|--------------|
 | **Naive Bayes**            | 0.7840   | 0.75          | 0.73       | 0.74         | 0.81          | 0.82       | 0.82         |
@@ -352,26 +352,26 @@ Berdasarkan hasil pengujian pada data uji:
   - Kinerja jauh di bawah dua model lainnya  
 
 
-#### Penyelesaian Permasalahan  
+### Penyelesaian Permasalahan  
 1. Fitur paling berpengaruh teridentifikasi: `Depression`, `Academic Pressure`, `Work Pressure`, `CGPA`, `Sleep_Duration_Num`, `Stress_Score`, `Lifestyle_Balance`.  
 2. Tiga model klasifikasi berhasil dibangun dan dievaluasi.  
 3. SVM terpilih sebagai model optimal dengan metrik tertinggi.
 
 ---
 
-#### Kesimpulan  
+### Kesimpulan  
 - Composite features (`Stress_Score`, `Lifestyle_Balance`) memberikan nilai tambah dalam memprediksi risiko depresi.  
 - **Support Vector Machine** adalah model terbaik untuk masalah klasifikasi risiko depresi pada pelajar.  
 - Pendekatan ini dapat diintegrasikan dalam sistem pendukung keputusan untuk deteksi dini dan intervensi kesehatan mental pelajar.
 
 
-#### Rekomendasi
+### Rekomendasi
 1. **Gunakan SVM** sebagai model utama untuk deteksi risiko depresi.  
 2. Simpan **Naive Bayes** sebagai opsi cepat untuk inferensi real-time.  
 3. **Optimasi Decision Tree** (pruning, `max_depth`, `min_samples_leaf`) atau pertimbangkan ensemble (Random Forest, Boosting) untuk meningkatkan akurasi. 
 
 
-
+---
 
 **---Ini adalah bagian akhir laporan---**
 
