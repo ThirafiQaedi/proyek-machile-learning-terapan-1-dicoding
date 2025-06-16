@@ -157,7 +157,7 @@ plt.show()
 - **Job Satisfaction**: 5 kategori, hampir semua 0 (27 893), sisanya tersebar sangat jarang (1–4). Mirip dengan Work Pressure, fitur ini kurang informatif.  
 - **Work/Study Hours**: 13 nilai (0–12 jam), puncak pada 10 jam (4 234), 12 jam (3 172), dan 11 jam (2 892). Menunjukkan sebagian besar menghabiskan 8–12 jam per hari.  
 - **Financial Stress**: 5 kategori (1–5), didominasi nilai 5 (6 715) dan 4 (5 775), artinya tekanan finansial cenderung tinggi pada responden.  
-- **Depression (target)**: Dua kelas, dengan 16 336 (≈58,5 %) positif depresi dan 11 565 (≈41,5 %) negatif. Menunjukkan ketidakseimbangan yang perlu diperhatikan dalam pemodelan (misal: resampling).
+- **Depression (target)**: Dua kelas, dengan 16 336 (≈58,5 %) positif depresi dan 11 565 (≈41,5 %) negatif. Menunjukkan ketidakseimbangan yang perlu diperhatikan dalam pemodelan .
 
 Correation Matrix
 """
@@ -209,7 +209,7 @@ plt.show()
   - Sebagian besar skor 1–5, dengan beberapa very-low score (0) muncul sebagai outlier. Perlu verifikasi apakah 0 tersebut missing value tersembunyi.
 
 - **Job Satisfaction**  
-  - Didominasi nilai 0, sedangkan nilai 1–4 hanya beberapa sampel saja—kategori yang muncul sebagai outliner
+  - Didominasi nilai 0, sedangkan nilai 1–4 hanya beberapa sampel saja—kategori yang muncul sebagai outliner.
 
 ##### Multivariate Analysis
 """
@@ -359,7 +359,8 @@ df = df[filter_outliers]
 df.shape
 
 """inisght:
-- Kode ini secara otomatis memilih **semua kolom numerik** (termasuk `id` dan `Depression`) untuk dihitung Q1, Q3, dan IQR-nya, lalu menghapus **setiap baris** yang mengandung nilai di luar `Q1 – 1.5×IQR` atau di atas `Q3 + 1.5×IQR` pada **kolom manapun**.  
+- melakukan metode penghapusan outliner dengan IQR Method
+- Pertama memilih **semua kolom numerik** (termasuk `id` dan `Depression`) untuk dihitung Q1, Q3, dan IQR-nya, lalu menghapus **setiap baris** yang mengandung nilai di luar `Q1 – 1.5×IQR` atau di atas `Q3 + 1.5×IQR` pada **kolom manapun**.  
 - Pendekatan ini bersifat **agresif**: satu outlier di satu fitur saja akan menghilangkan seluruh baris tersebut, sehingga proporsi data yang terbuang bisa sangat besar.  
 - Karena kolom `id` (identifier unik) dan target `Depression` juga dianggap numerik, baris dengan nilai ekstrem di `id` atau label target mungkin terhapus, **mengganggu distribusi kelas** dan robusitas model.  
 """
@@ -543,22 +544,22 @@ cluster_labels = {
     2: "Stress Rendah / Tidur Sedang / CGPA Sedang"
 }
 
-# Map labels to a new column in DataFrame.
+# Memetakan label ke kolom baru di DataFrame.
 df['Cluster_Label'] = df['Cluster'].map(cluster_labels)
 
-print("\nSample dengan Cluster Labels:")
+print("\nContoh data dengan Label Klaster:")
 print(df[['Cluster', 'Cluster_Label']].head())
 
-# Annotate the PCA scatter plot with the domain-specific labels.
+# Memberi anotasi pada plot scatter PCA dengan label khusus domain.
 plt.figure(figsize=(8, 6))
 for clus in sorted(df['Cluster'].unique()):
     cluster_data = df[df['Cluster'] == clus]
     plt.scatter(cluster_data['Component1'], cluster_data['Component2'],
-                label=cluster_labels.get(clus, f"Cluster {clus}"),
+                label=cluster_labels.get(clus, f"Klaster {clus}"),
                 alpha=0.6)
-plt.xlabel('PCA Component 1')
-plt.ylabel('PCA Component 2')
-plt.title('Clusters with Domain-Specific Labels')
+plt.xlabel('Komponen PCA 1')
+plt.ylabel('Komponen PCA 2')
+plt.title('Klaster dengan Label Khusus Domain')
 plt.legend()
 plt.show()
 
